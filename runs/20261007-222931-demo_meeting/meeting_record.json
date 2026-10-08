@@ -1,0 +1,196 @@
+{
+  "title": "Payments Platform Weekly Sync – Kafka Lag, PgBouncer Migration, Support Bot Fine-tuning",
+  "summary": "The team reviewed three agenda items: a Kafka consumer lag incident, the upcoming PgBouncer migration, and the support‑bot fine‑tuning experiment. Rohan confirmed the incident was resolved and will add a Grafana alert for consumer lag by Thursday. The group decided to roll out PgBouncer to production in the next sprint and to write a rollout runbook, while the idempotency key fix will be scheduled later. Kabir will gather GPU cost comparisons for serving the bot, and the decision on using VLLM will be revisited in a future meeting.",
+  "participants": [
+    "Rohan",
+    "Mira",
+    "Kabir"
+  ],
+  "minutes": [
+    {
+      "topic": "Kafka consumer lag incident",
+      "points": [
+        "The settlements topic consumer lag spiked above 40,000 messages on Tuesday.",
+        "Root cause was a bad Redis connection pool setting introduced in the recent deploy.",
+        "P99 latency on the webhook endpoint rose to 1,200 ms; the config was rolled back and lag returned to normal.",
+        "There is currently no Grafana alert for consumer lag."
+      ]
+    },
+    {
+      "topic": "Postgres migration with PgBouncer",
+      "points": [
+        "PgBouncer in transaction‑pooling mode reduced connection count by 60% on staging.",
+        "The team agreed to move PgBouncer to production in the next sprint.",
+        "A rollout runbook will be written.",
+        "Idempotency‑key handling in the Razorpay webhook needs fixing but will be scheduled later."
+      ]
+    },
+    {
+      "topic": "Support‑bot fine‑tuning experiment",
+      "points": [
+        "A Llama model was fine‑tuned on 8,000 support tickets, improving accuracy from 71% to 78%.",
+        "The model is not yet production‑ready.",
+        "The team discussed serving the model with VLLM to reduce GPU cost but postponed the decision.",
+        "Kabir will collect GPU cost numbers for both serving options before the next sync."
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "decision": "Roll out PgBouncer to production in the next sprint",
+      "evidence": {
+        "quote": "So the decision is we roll out PgBouncer to production in the next sprint",
+        "segment_ids": [
+          19
+        ],
+        "start": 81.52,
+        "verified": true
+      }
+    }
+  ],
+  "action_items": [
+    {
+      "id": "T1",
+      "task": "Add a Grafana alert for consumer lag on the settlements topic",
+      "owner": "Rohan",
+      "owner_stated": true,
+      "deadline": "Thursday",
+      "deadline_stated": true,
+      "evidence": {
+        "quote": "Rohan, please add a Grafana alert for consumer lag by Thursday.",
+        "segment_ids": [
+          10
+        ],
+        "start": 47.48,
+        "verified": true
+      },
+      "owner_evidence": "Rohan, please add a Grafana alert for consumer lag by Thursday.",
+      "deadline_evidence": "Rohan, please add a Grafana alert for consumer lag by Thursday."
+    },
+    {
+      "id": "T2",
+      "task": "Write the rollout runbook for PgBouncer production deployment",
+      "owner": "Unspecified",
+      "owner_stated": false,
+      "deadline": "Unspecified",
+      "deadline_stated": false,
+      "evidence": {
+        "quote": "Great. I'll write the rollout runbook.",
+        "segment_ids": [
+          20
+        ],
+        "start": 97.35,
+        "verified": true
+      },
+      "owner_evidence": null,
+      "deadline_evidence": null
+    },
+    {
+      "id": "T3",
+      "task": "Collect GPU cost numbers for serving the support bot with VLLM versus the current setup",
+      "owner": "Kabir",
+      "owner_stated": true,
+      "deadline": "before next week's sync",
+      "deadline_stated": true,
+      "evidence": {
+        "quote": "Kabir, could you collect the GPU cost numbers for both options before the next sync?",
+        "segment_ids": [
+          32
+        ],
+        "start": 151.35,
+        "verified": true
+      },
+      "owner_evidence": "Kabir, could you collect the GPU cost numbers for both options before the next sync?",
+      "deadline_evidence": "Sure, I'll get the numbers before next week's sync."
+    }
+  ],
+  "open_items": [
+    {
+      "item": "Consider serving the support bot with VLLM instead of the current setup",
+      "kind": "proposal",
+      "evidence": {
+        "quote": "Could we serve it with VLLM instead of our current setup?",
+        "segment_ids": [
+          28
+        ],
+        "start": 139.93,
+        "verified": true
+      }
+    },
+    {
+      "item": "Fix idempotency key handling in the Razorpay webhook handler",
+      "kind": "unresolved",
+      "evidence": {
+        "quote": "Okay, we'll leave the owner open for now and pick it up in planning.",
+        "segment_ids": [
+          23
+        ],
+        "start": 115.77,
+        "verified": true
+      }
+    }
+  ],
+  "verification_log": [
+    "All decisions, tasks, owners and deadlines were matched to quotes in the transcript."
+  ],
+  "metadata": {
+    "source_file": "demo_meeting.mp3",
+    "duration_s": 176.1,
+    "processed_at": "2026-10-07T22:29:56",
+    "models": {
+      "stt": "whisper-large-v3 @ api.groq.com",
+      "refine": "openai/gpt-oss-120b @ api.groq.com",
+      "document": "openai/gpt-oss-120b @ api.groq.com"
+    },
+    "domain": "payments platform / backend operations",
+    "glossary": [
+      "Kafka",
+      "Postgres",
+      "PgBouncer",
+      "Redis",
+      "Grafana",
+      "kubectl",
+      "P99 latency",
+      "webhook",
+      "SOC2",
+      "idempotency key",
+      "Razorpay",
+      "Llama",
+      "VLLM",
+      "GPU"
+    ],
+    "corrections_applied": 4,
+    "corrections_rejected": 0,
+    "stage_seconds": {
+      "validate": 0.9,
+      "transcribe": 15.0,
+      "refine": 3.1,
+      "document": 6.6
+    },
+    "usage": {
+      "stt": {
+        "calls": 1,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "seconds": 12.009356260299683
+      },
+      "refine": {
+        "calls": 2,
+        "prompt_tokens": 2313,
+        "completion_tokens": 682,
+        "seconds": 3.045456886291504
+      },
+      "document": {
+        "calls": 1,
+        "prompt_tokens": 1879,
+        "completion_tokens": 2655,
+        "seconds": 6.54956579208374
+      }
+    }
+  },
+  "schema": "meetscribe.meeting_record/v1",
+  "notes": {
+    "unspecified": "'Unspecified' means the recording did not state this detail."
+  }
+}

@@ -1,0 +1,4 @@
+﻿id,task,owner,owner_stated,deadline,deadline_stated,timestamp,evidence
+T1,Add a Grafana alert for consumer lag on the settlements topic,Rohan,True,Thursday,True,00:47,"Rohan, please add a Grafana alert for consumer lag by Thursday."
+T2,Write the rollout runbook for PgBouncer production deployment,Unspecified,False,Unspecified,False,01:37,Great. I'll write the rollout runbook.
+T3,Collect GPU cost numbers for serving the support bot with VLLM versus the current setup,Kabir,True,before next week's sync,True,02:31,"Kabir, could you collect the GPU cost numbers for both options before the next sync?"

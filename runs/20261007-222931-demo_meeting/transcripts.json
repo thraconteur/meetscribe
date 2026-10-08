@@ -1,0 +1,439 @@
+{
+  "raw": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "end": 5.2,
+      "text": "Okay, let's get started. This is the weekly sync for the payments platform."
+    },
+    {
+      "id": 2,
+      "start": 6.24,
+      "end": 11.52,
+      "text": "We have three things today, the Kafka consumer lag incident, the Postgres migration,"
+    },
+    {
+      "id": 3,
+      "start": 12.06,
+      "end": 17.9,
+      "text": "and the fine-tuning experiment for the support bot. Rohan, can you start with the incident?"
+    },
+    {
+      "id": 4,
+      "start": 18.82,
+      "end": 25.3,
+      "text": "Sure. On Tuesday the Kafka consumer lag on the settlements topic went above 40,000 messages."
+    },
+    {
+      "id": 5,
+      "start": 25.3,
+      "end": 30.04,
+      "text": "The root cause was a bad Redis connection pool setting after the deploy."
+    },
+    {
+      "id": 6,
+      "start": 31.02,
+      "end": 35.46,
+      "text": "P99 latency on the webhook endpoint went up to 1200 milliseconds."
+    },
+    {
+      "id": 7,
+      "start": 36.66,
+      "end": 41.18,
+      "text": "I've already rolled back the config with QBectl, and the lag is back to normal."
+    },
+    {
+      "id": 8,
+      "start": 42.14,
+      "end": 45.26,
+      "text": "But we still don't have an alert for consumer lag in Grafana."
+    },
+    {
+      "id": 9,
+      "start": 46.2,
+      "end": 46.6,
+      "text": "Okay."
+    },
+    {
+      "id": 10,
+      "start": 47.48,
+      "end": 51.52,
+      "text": "Rohan, please add a Grafana alert for consumer lag by Thursday."
+    },
+    {
+      "id": 11,
+      "start": 51.52,
+      "end": 55.5,
+      "text": "Yes, I'll set up the Grafana alert by Thursday."
+    },
+    {
+      "id": 12,
+      "start": 56.14,
+      "end": 56.8,
+      "text": "Good."
+    },
+    {
+      "id": 13,
+      "start": 57.8,
+      "end": 60.3,
+      "text": "Second item, the Postgres migration."
+    },
+    {
+      "id": 14,
+      "start": 61.34,
+      "end": 62.72,
+      "text": "Mira, where are we?"
+    },
+    {
+      "id": 15,
+      "start": 63.54,
+      "end": 69.78,
+      "text": "We tested PgBouncer in transaction pooling mode on staging and the connection count dropped by 60%."
+    },
+    {
+      "id": 16,
+      "start": 69.78,
+      "end": 73.1,
+      "text": "I think we should move production to PgBouncer."
+    },
+    {
+      "id": 17,
+      "start": 73.92,
+      "end": 78.34,
+      "text": "Before we do that, do we need to check the SOC2 audit requirements?"
+    },
+    {
+      "id": 18,
+      "start": 79.06,
+      "end": 81.3,
+      "text": "I'm not sure it affects anything, but..."
+    },
+    {
+      "id": 19,
+      "start": 81.52,
+      "end": 96.43,
+      "text": "but the auditors asked about database access logs Let not block on that We agreed last week that the audit only covers the read replicas So the decision is we roll out pg bouncer to production in the next sprint"
+    },
+    {
+      "id": 20,
+      "start": 97.35,
+      "end": 105.13,
+      "text": "Great. I'll write the rollout runbook. Thanks Mira. Someone also needs to update the idempotency"
+    },
+    {
+      "id": 21,
+      "start": 105.13,
+      "end": 110.89,
+      "text": "key handling in the razor pay webhook handler, because retries are creating duplicate refunds."
+    },
+    {
+      "id": 22,
+      "start": 110.89,
+      "end": 114.85,
+      "text": "That needs to be fixed, but I can't take it this week."
+    },
+    {
+      "id": 23,
+      "start": 115.77,
+      "end": 119.43,
+      "text": "Okay, we'll leave the owner open for now and pick it up in planning."
+    },
+    {
+      "id": 24,
+      "start": 120.45,
+      "end": 124.77,
+      "text": "Last item, the support bot Mira, the Laura fine-tuning results."
+    },
+    {
+      "id": 25,
+      "start": 125.69,
+      "end": 129.45,
+      "text": "We fine-tuned a Llama model with Laura on 8000 support tickets."
+    },
+    {
+      "id": 26,
+      "start": 130.01,
+      "end": 134.39,
+      "text": "It answers refund questions better, but it is not ready for production."
+    },
+    {
+      "id": 27,
+      "start": 135.45,
+      "end": 139.93,
+      "text": "Accuracy went from 71% to 78% on our eval set."
+    },
+    {
+      "id": 28,
+      "start": 139.93,
+      "end": 144.01,
+      "text": "Could we serve it with VLLM instead of our current setup?"
+    },
+    {
+      "id": 29,
+      "start": 144.71,
+      "end": 146.73,
+      "text": "It might cut the GPU cost."
+    },
+    {
+      "id": 30,
+      "start": 147.29,
+      "end": 147.95,
+      "text": "Maybe."
+    },
+    {
+      "id": 31,
+      "start": 148.61,
+      "end": 150.45,
+      "text": "Let's not decide that today."
+    },
+    {
+      "id": 32,
+      "start": 151.35,
+      "end": 156.47,
+      "text": "Kabir, could you collect the GPU cost numbers for both options before the next sync?"
+    },
+    {
+      "id": 33,
+      "start": 157.37,
+      "end": 160.49,
+      "text": "Sure, I'll get the numbers before next week's sync."
+    },
+    {
+      "id": 34,
+      "start": 161.43,
+      "end": 161.85,
+      "text": "Perfect."
+    },
+    {
+      "id": 35,
+      "start": 162.85,
+      "end": 169.15,
+      "text": "To recap, PGBouncer goes to production next sprint, Rohan adds the Grafana alert by Thursday,"
+    },
+    {
+      "id": 36,
+      "start": 169.15,
+      "end": 175.05,
+      "text": "Mirror writes the runbook, and Kabir compares the serving costs. Thanks everyone."
+    }
+  ],
+  "refined": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "end": 5.2,
+      "text": "Okay, let's get started. This is the weekly sync for the payments platform."
+    },
+    {
+      "id": 2,
+      "start": 6.24,
+      "end": 11.52,
+      "text": "We have three things today, the Kafka consumer lag incident, the Postgres migration,"
+    },
+    {
+      "id": 3,
+      "start": 12.06,
+      "end": 17.9,
+      "text": "and the fine-tuning experiment for the support bot. Rohan, can you start with the incident?"
+    },
+    {
+      "id": 4,
+      "start": 18.82,
+      "end": 25.3,
+      "text": "Sure. On Tuesday the Kafka consumer lag on the settlements topic went above 40,000 messages."
+    },
+    {
+      "id": 5,
+      "start": 25.3,
+      "end": 30.04,
+      "text": "The root cause was a bad Redis connection pool setting after the deploy."
+    },
+    {
+      "id": 6,
+      "start": 31.02,
+      "end": 35.46,
+      "text": "P99 latency on the webhook endpoint went up to 1200 milliseconds."
+    },
+    {
+      "id": 7,
+      "start": 36.66,
+      "end": 41.18,
+      "text": "I've already rolled back the config with kubectl, and the lag is back to normal."
+    },
+    {
+      "id": 8,
+      "start": 42.14,
+      "end": 45.26,
+      "text": "But we still don't have an alert for consumer lag in Grafana."
+    },
+    {
+      "id": 9,
+      "start": 46.2,
+      "end": 46.6,
+      "text": "Okay."
+    },
+    {
+      "id": 10,
+      "start": 47.48,
+      "end": 51.52,
+      "text": "Rohan, please add a Grafana alert for consumer lag by Thursday."
+    },
+    {
+      "id": 11,
+      "start": 51.52,
+      "end": 55.5,
+      "text": "Yes, I'll set up the Grafana alert by Thursday."
+    },
+    {
+      "id": 12,
+      "start": 56.14,
+      "end": 56.8,
+      "text": "Good."
+    },
+    {
+      "id": 13,
+      "start": 57.8,
+      "end": 60.3,
+      "text": "Second item, the Postgres migration."
+    },
+    {
+      "id": 14,
+      "start": 61.34,
+      "end": 62.72,
+      "text": "Mira, where are we?"
+    },
+    {
+      "id": 15,
+      "start": 63.54,
+      "end": 69.78,
+      "text": "We tested PgBouncer in transaction pooling mode on staging and the connection count dropped by 60%."
+    },
+    {
+      "id": 16,
+      "start": 69.78,
+      "end": 73.1,
+      "text": "I think we should move production to PgBouncer."
+    },
+    {
+      "id": 17,
+      "start": 73.92,
+      "end": 78.34,
+      "text": "Before we do that, do we need to check the SOC2 audit requirements?"
+    },
+    {
+      "id": 18,
+      "start": 79.06,
+      "end": 81.3,
+      "text": "I'm not sure it affects anything, but..."
+    },
+    {
+      "id": 19,
+      "start": 81.52,
+      "end": 96.43,
+      "text": "but the auditors asked about database access logs Let not block on that We agreed last week that the audit only covers the read replicas So the decision is we roll out PgBouncer to production in the next sprint"
+    },
+    {
+      "id": 20,
+      "start": 97.35,
+      "end": 105.13,
+      "text": "Great. I'll write the rollout runbook. Thanks Mira. Someone also needs to update the idempotency"
+    },
+    {
+      "id": 21,
+      "start": 105.13,
+      "end": 110.89,
+      "text": "key handling in the Razorpay webhook handler, because retries are creating duplicate refunds."
+    },
+    {
+      "id": 22,
+      "start": 110.89,
+      "end": 114.85,
+      "text": "That needs to be fixed, but I can't take it this week."
+    },
+    {
+      "id": 23,
+      "start": 115.77,
+      "end": 119.43,
+      "text": "Okay, we'll leave the owner open for now and pick it up in planning."
+    },
+    {
+      "id": 24,
+      "start": 120.45,
+      "end": 124.77,
+      "text": "Last item, the support bot Mira, the Laura fine-tuning results."
+    },
+    {
+      "id": 25,
+      "start": 125.69,
+      "end": 129.45,
+      "text": "We fine-tuned a Llama model with Laura on 8000 support tickets."
+    },
+    {
+      "id": 26,
+      "start": 130.01,
+      "end": 134.39,
+      "text": "It answers refund questions better, but it is not ready for production."
+    },
+    {
+      "id": 27,
+      "start": 135.45,
+      "end": 139.93,
+      "text": "Accuracy went from 71% to 78% on our eval set."
+    },
+    {
+      "id": 28,
+      "start": 139.93,
+      "end": 144.01,
+      "text": "Could we serve it with VLLM instead of our current setup?"
+    },
+    {
+      "id": 29,
+      "start": 144.71,
+      "end": 146.73,
+      "text": "It might cut the GPU cost."
+    },
+    {
+      "id": 30,
+      "start": 147.29,
+      "end": 147.95,
+      "text": "Maybe."
+    },
+    {
+      "id": 31,
+      "start": 148.61,
+      "end": 150.45,
+      "text": "Let's not decide that today."
+    },
+    {
+      "id": 32,
+      "start": 151.35,
+      "end": 156.47,
+      "text": "Kabir, could you collect the GPU cost numbers for both options before the next sync?"
+    },
+    {
+      "id": 33,
+      "start": 157.37,
+      "end": 160.49,
+      "text": "Sure, I'll get the numbers before next week's sync."
+    },
+    {
+      "id": 34,
+      "start": 161.43,
+      "end": 161.85,
+      "text": "Perfect."
+    },
+    {
+      "id": 35,
+      "start": 162.85,
+      "end": 169.15,
+      "text": "To recap, PgBouncer goes to production next sprint, Rohan adds the Grafana alert by Thursday,"
+    },
+    {
+      "id": 36,
+      "start": 169.15,
+      "end": 175.05,
+      "text": "Mirror writes the runbook, and Kabir compares the serving costs. Thanks everyone."
+    }
+  ],
+  "dropped_segments": []
+}
