@@ -1,0 +1,10 @@
+gradio>=6.0
+openai>=1.40
+pydantic>=2.5
+rapidfuzz>=3.5
+python-dotenv>=1.0
+# Optional: local speech-to-text without an API key (STT_BACKEND=local)
+# faster-whisper>=1.0
+# Dev / evaluation
+pytest>=8.0
+jiwer>=3.0

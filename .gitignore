@@ -1,0 +1,13 @@
+.env
+runs/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.gradio/
+samples/*.mp3
+!samples/demo_meeting.mp3
+
+env/
+*.zip
