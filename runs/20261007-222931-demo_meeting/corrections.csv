@@ -1,5 +1,0 @@
-﻿segment,timestamp,original,corrected,category,reason,applied,rejected_because
-S7,00:36,QBectl,kubectl,term,misheard kubectl,True,
-S19,01:21,pg bouncer,PgBouncer,term,incorrect casing of PgBouncer,True,
-S21,01:45,razor pay,Razorpay,name,product name misspelled,True,
-S35,02:42,PGBouncer,PgBouncer,term,incorrect casing of PgBouncer,True,
