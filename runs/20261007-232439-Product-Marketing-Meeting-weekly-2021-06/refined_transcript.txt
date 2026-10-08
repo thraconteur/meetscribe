@@ -1,0 +1,445 @@
+# Refined transcript (domain terms corrected)
+# model: openai/gpt-oss-120b @ api.groq.com
+
+[00:00 - 00:01] I can record.
+[00:02 - 00:07] And we don't have a ton of items to get to.
+[00:08 - 00:14] And I might be able to do one that might be fun if we have a little bit of time.
+[00:16 - 00:29] So corporate events, they, I think I saw a little, I put this in Slack and I saw a little bit of kind of noise around it, which was good.
+[00:30 - 00:43] So, you know, the nutshell here is as we've kind of restructured and tried different things, the event support that we need isn't as nailed down as it needs to be.
+[00:44 - 00:55] So the current tactic that we're going with is go-to-market team signs up and kind of sponsors that event.
+[00:55 - 01:01] So you support as a PMM, your campaign manager does the campaigns for that event, et cetera, et cetera, et cetera.
+[01:02 - 01:08] I don't see anyone in the, maybe there are comments in the issue.
+[01:08 - 01:11] I don't see the header updated yet.
+[01:11 - 01:15] I thought we had in Slack sort of farmed each one of them out.
+[01:15 - 01:29] That's so I guess the next so it looks like Ty put in some folks. It looks like this looks good.
+[01:30 - 01:37] So that let's see, need support from GTM teams. So I guess the ask would be
+[01:37 - 01:43] to work with your GTM teams?
+[01:43 - 01:47] So let me ask, I saw some Slack, I think in our Slack,
+[01:48 - 01:52] but did you all, were you all able to connect
+[01:52 - 01:53] with like your GTM teams?
+[01:57 - 02:00] On Slack only and on the issue actually.
+[02:00 - 02:04] Yeah, same, not in real time, but source feedback.
+[02:04 - 02:06] I got one person to respond so far.
+[02:06 - 02:08] so it may end up Cindy being you and I
+[02:08 - 02:10] just picking the one that we want to do and then
+[02:10 - 02:11] they can back us up
+[02:11 - 02:16] if we don't get any more feedback
+[02:16 - 02:19] yeah do y'all
+[02:19 - 02:22] does anybody have like a regular
+[02:22 - 02:24] sync still are those
+[02:24 - 02:39] all been cancelled or is there yeah we on like the two week cadence Okay Yeah GitOps has been canceled after the enablement
+[02:42 - 02:42] Cool.
+[02:42 - 02:46] So I'm just trying to catch up with the thread.
+[02:46 - 02:53] so it looks like maybe a platform on reinvent
+[02:53 - 02:59] CI/CD on google next and get ops on KubeCon does that sound right
+[02:59 - 03:02] yeah yep that's where we were last i heard
+[03:02 - 03:06] cool so then i think um
+[03:06 - 03:12] i think we can we can help the corp events team they do
+[03:12 - 03:15] they do a lot of like uh cat herding and
+[03:15 - 03:21] you know keep on tracking people down so i think if if this team can take the mission to
+[03:21 - 03:29] like try to help track that down so if you you know get the commitment specifically from your
+[03:29 - 03:35] campaign managers hey like we're we're signing up for kubcon you know can you comment on the
+[03:35 - 03:42] issue that yes i can commit to this etc etc etc you know um so that just so that they can get
+[03:42 - 03:44] that event support.
+[03:44 - 03:46] But that looks good, and I appreciate it.
+[03:48 - 03:50] Thanks for the link too, Samia, on the roles.
+[03:52 - 03:53] Product announcements.
+[03:55 - 03:58] So I appreciate Brian for adding this.
+[03:58 - 04:01] I probably should have added it, but...
+[04:01 - 04:04] I had two questions about that one.
+[04:04 - 04:08] One is, over what time frame are we looking at?
+[04:08 - 04:18] So, in theory, this could be the same as the GitLab 14 launch where we're saying basically
+[04:18 - 04:25] since 13.0, what kind of big improvements have we made?
+[04:25 - 04:31] Candidly, this is always a little bit tough.
+[04:31 - 04:37] I am not totally sure of all of the kind of the interplay here.
+[04:37 - 04:43] But I think this is kind of the general gist of this assignment is, okay, we have commit
+[04:43 - 04:45] coming up.
+[04:45 - 04:51] We have some amount of, like, we have a stage, you know, a metaphorical stage to say something
+[04:51 - 04:57] to the world and we'll get some amount of press attention because we're having an event,
+[04:57 - 05:08] right What kind of announcements do we make At GitLab it really really tough to make product announcements because our entire roadmap is completely public yada yada yada
+[05:08 - 05:21] So the thought here is to, but also because our entire roadmap is completely public and because we ship these tiny little MVCs, a new feature will come out, but it'll be not really usable.
+[05:22 - 05:22] Right?
+[05:22 - 05:23] So it takes a while.
+[05:23 - 05:34] So if you look back over the past year and say, okay, like what started in the last year, but now is really like a full-fledged feature, what would be coming out of beta, right?
+[05:34 - 05:42] Like if we were any other company and we started a beta program in this last year, what would we be announcing as GA at commit?
+[05:43 - 05:45] That's kind of my thought on it.
+[05:46 - 05:47] I see a couple of head nods.
+[05:47 - 05:48] What do you think, Sydney?
+[05:48 - 05:56] Yeah, I think I was inclined to group some things to say like vulnerability management,
+[05:56 - 06:01] because there were tiny little MVCs all the way along. But if you look at over the course of the
+[06:01 - 06:08] year, we went from this to this. It makes more sense to me to highlight that than in any
+[06:08 - 06:17] individual little thing. And then the other point was, we just had 14.0. Can we just can we reuse
+[06:17 - 06:22] some of those things and plug them in here. Absolutely. Yeah. Yeah. And vulnerability
+[06:22 - 06:29] management was one of the features out of, we looked at 14.0. So I think, yeah, this is like,
+[06:29 - 06:35] let's take the stuff from 14.0 and then maybe add a few more so that we can hit kind of different
+[06:35 - 06:41] areas of press or give our PR team, this is kind of like input into our PR team to give them fodder
+[06:41 - 06:42] to go out with.
+[06:42 - 06:45] And are we trying to hit three per stage?
+[06:46 - 06:52] Yeah, ideally there's just three items per stage.
+[06:52 - 06:55] And then I think y'all made some good notes that, okay,
+[06:55 - 06:56] we need to add manage.
+[06:56 - 06:57] So I see manage in here.
+[06:57 - 06:58] That's excellent.
+[07:00 - 07:04] And integrations, we don't – well, actually,
+[07:04 - 07:06] we have some pretty exciting integrations.
+[07:06 - 07:08] The Jira stuff is pretty good.
+[07:08 - 07:13] There's a couple of things in integrations with VS Code that could be notable,
+[07:13 - 07:21] but can I show what I did for SCM just to get some general feedback on it?
+[07:21 - 07:24] And if someone hasn't done it, maybe that'll also kick in.
+[07:25 - 07:41] I was going Cindy direction here which was thinking you know a lot of and then I call them key iterations the sort of specific things So I listed a few specific things like three or four per each as key iterations but I called them something overall
+[07:41 - 07:42] So we would have like one thing to call them.
+[07:44 - 07:48] There are several key iterations aligned with Ghibli cluster.
+[07:49 - 07:53] Several that roll up to a research based user experience.
+[07:53 - 08:02] And I was thinking, like, I was shy on calling out UX as a bucket, except that actually that's super typical, right?
+[08:02 - 08:07] Like Windows 11 or anybody who's rolling stuff out, they almost always have UX as one of their three things.
+[08:07 - 08:10] And then they mention a laundry list of stuff that aligns to that.
+[08:11 - 08:15] So I, you know, forgave myself for doing something at first.
+[08:15 - 08:19] I was kind of like shy about calling out UX and bucketing some things there.
+[08:19 - 08:23] But actually, when I looked around, that's pretty much how everybody does a big launch.
+[08:23 - 08:28] And in terms of the excitement level, that also, like, I went in thinking this is just a two.
+[08:29 - 08:32] I guess part of it is, like, I feel like we're almost fixing something that's broken.
+[08:32 - 08:36] And that's not something you want to shout from the rooftops about.
+[08:36 - 08:38] But actually, some of that stuff's really cool.
+[08:38 - 08:39] So I gave it a three.
+[08:40 - 08:42] Excitement level, I wasn't sure exactly where to place things.
+[08:43 - 08:48] But I figured I wouldn't, like Cindy's comment, have something that's a one here anyway.
+[08:48 - 08:55] But the only way I could make sense of the iterations was to bucket them as something.
+[08:56 - 09:00] And so that's kind of how I came down on it and what everyone thinks about that.
+[09:04 - 09:05] I like that.
+[09:09 - 09:14] I've done a similar, I've taken a similar approach for Monitor.
+[09:15 - 09:18] With incident management, there were a bunch of things that we released.
+[09:18 - 09:28] although the core of incident management was part of 12.x I think so I did the same over there as
+[09:28 - 09:34] well yeah I think that makes sense yeah and that that would help me with the plan stuff as well
+[09:34 - 09:38] because there are some things like epic boards that people have been asking for for years now
+[09:38 - 09:45] and they finally have and that's great but I think you know like the milestone burn up charts
+[09:45 - 09:48] That was a two and that's helpful.
+[09:48 - 09:50] And I was looking through features
+[09:50 - 09:54] and actual monthly features that were released
+[09:54 - 09:55] in a given month.
+[09:55 - 09:56] I mean, that was one of the more important ones,
+[09:56 - 09:57] but it's not very exciting,
+[09:57 - 10:00] but we can bundle that with some other things
+[10:00 - 10:02] and up-level it.
+[10:02 - 10:04] So that would be helpful there.
+[10:04 - 10:06] And also Brian about the VS Code thing.
+[10:06 - 10:15] One other cool thing about that is both of those VS Code integrations that hit the same month were community contributions, which is also kind of cool.
+[10:17 - 10:21] Is that, do we have VS Code listed on here?
+[10:23 - 10:27] I didn't add it, but I can add that in. I've got good notes on that.
+[10:28 - 10:35] The extension that had been around for a while became official, was kind of one of the things, but there's some other stuff that's a little juicier than that.
+[10:36 - 10:51] I think that's a pretty good note as well. We did that with our Terraform module. There was a community module, but now it's officially supported.
+[10:51 - 11:01] That can be the line, yes or no, whether you can use the thing for a lot of businesses. I think that's a good one too.
+[11:01 - 11:20] How are we measuring excitement levels? One, two, and three. Is there, I was, I was looking at maybe MAU as a metric to perhaps measure whether customers have started using that are interested in using that or not.
+[11:20 - 11:30] We probably may not have it for everything, but at least some of it, wherever we have it, it's probably something we can use.
+[11:30 - 11:36] But of course, we need a benchmark level of what MAU we want to call one, two, or three.
+[11:37 - 11:40] I think it's a little bit of a judgment call.
+[11:41 - 11:49] For example, Cormac was saying Epic boards is something that was asked for for a long time.
+[11:49 - 11:55] Now, depending on how it's asked for, maybe that means it's exciting or it's not.
+[11:55 - 11:55] Right.
+[11:55 - 12:05] But usually when something gets a lot of upvotes or when there's a lot of demand for it, then I would, I would bump the excitement level on something like that.
+[12:05 - 12:10] Certainly it's something shipped and a lot of people are using it.
+[12:10 - 12:13] The MAU, that's another good measure.
+[12:13 - 12:16] I don't know that any one of those needs to kind of be exclusive.
+[12:16 - 12:48] I think it a bit of an individual judgment column What is your feeling based on you know could be anecdotal like you talk to customers and they really hyper excited about this Or maybe not which is okay I think it okay Harsh responded to my comment about why we have the low excitement ones and just said something about having them sort of stack ranked
+[12:50 - 12:55] Yeah, I might even constrain this.
+[12:55 - 13:02] We're not going to highlight low excitement, but we want to see the full spectrum, especially in the case we have slim pickings.
+[13:02 - 13:06] Alternatively, if there are double digit entries, then we can stack rank.
+[13:10 - 13:13] So that's kind of also helpful there.
+[13:13 - 13:21] So if we have three for all of these, it looks like we're going to get there and that's going to be quite a lot of features.
+[13:21 - 13:37] So I might constrain it like this. Maybe you can only give out one, two or three and treat it as a stack rank rather than just like a raw excitement level.
+[13:37 - 13:38] That doesn't necessarily...
+[13:38 - 13:46] Somebody's one or somebody's three may be more important than somebody else's one.
+[13:46 - 13:55] I started by just looking at what was considered a key feature over the past year from Create.
+[13:55 - 14:01] And there are at least a dozen things that I'm not mentioning that could be on the list.
+[14:01 - 14:04] I could give you ten things instead of three.
+[14:04 - 14:09] Give this just the rough pass.
+[14:09 - 14:16] And like a lot of things recently, I've been moving between docs and spreadsheet and the spreadsheet to docs.
+[14:17 - 14:31] This, you know, this might, this might end up or some iteration of this might end up in a spreadsheet where we then try to stack rank and PR is like, okay, out of all of like the, you know, there's maybe 10 boxes here and three each out of the 30 items, which are the top five.
+[14:31 - 14:36] Actually, let's just, let's actually just do that.
+[14:36 - 14:40] Let's just do this like top five overall.
+[14:41 - 14:44] This one is a PR driven to some degree.
+[14:44 - 14:47] What about like a Noop and Christie's product keynote
+[14:47 - 14:50] at commit, are we dovetailing this with that?
+[14:50 - 14:53] So this is exactly where this is headed to,
+[14:54 - 14:58] is the idea that during the product keynote
+[14:58 - 15:13] And then ideally during Sid keynote as well that there some level of like an announcement that we make that then the press cares about that announcement Again really tough to do at GitLab because it all been around for a while
+[15:13 - 15:19] So this is our attempt to head to that area, is to say these are the announcements of the event.
+[15:19 - 15:25] And yeah, maybe it's some things that have been around for a while, but now they're at a level of maturity.
+[15:25 - 15:29] Now there's reason to be excited about this.
+[15:29 - 15:32] So that's kind of where it's coming from.
+[15:32 - 15:37] So I put a top five overall.
+[15:40 - 15:43] Maybe we can just, you know.
+[15:48 - 15:50] We should reserve a spot for plan,
+[15:50 - 15:54] but I'm going to have to go through and do some aggregating after this.
+[15:55 - 15:58] Just go through the list of what shipped in the last 12 months and re-bucket that.
+[15:59 - 16:24] Maybe we can do like five minutes, just time box and look at these here. What do you all think would be a top five out of the list of 20 or 30?
+[16:24 - 16:38] I would say if UX does end up being a flag that we fly, that's an easy one because there's more than just maps to the create stage that would be considered UX improvement.
+[16:38 - 16:47] Okay.
+[16:47 - 16:49] What else?
+[16:49 - 17:14] We could have either vulnerability management or what I've been struggling with a little bit is I'd like to kind of group some of this proprietary scanning without making it sound like they're scanning improvements because that sounds like they weren't good before.
+[17:14 - 17:15] Yeah.
+[17:15 - 17:29] Let's go with vulnerability management for now. I would agree on that one. And I would say that some of these we did do some press around and the fuzzing acquisitions was one thing.
+[17:29 - 17:46] That was kind of old I mean we did the fuzzing acquisitions a long time ago Was it within the past year or longer I thought it was within the past year
+[17:46 - 17:50] I think it was in the last little over six months or so.
+[17:50 - 17:52] It was last summer, right?
+[17:52 - 17:54] It was like last spring or summer.
+[17:54 - 18:12] And then we did another set of press around the integration of it because the PR team liked all the, I mean, we got a lot of attention on the acquisition. So they had me do a follow-up on the integration. I just feel like it's kind of worn out now.
+[18:12 - 18:21] Right. That's what I was saying is that the fuzzing we already did press on through probably will not get another chomp at that. So I think let's go with vulnerability management.
+[18:22 - 18:23] Unreviewed.
+[18:23 - 18:41] Well, we also have, in terms of proprietary stuff, we've also got, we replaced one of our scanners with Semgrep and we did, we have our own proprietary DAST scanner now that's in, it's in beta called Berserker.
+[18:41 - 18:48] So it's our answer to scanning single page applications, which represent a unique challenge.
+[18:48 - 18:55] I think, I mean, if I could have to, it would be vulnerability management and Berserker probably.
+[18:55 - 19:02] Okay. Semgrep did get picked up as an online item in a couple of the pieces about GitLab 14.
+[19:02 - 19:15] Which between the proprietary ships and the vulnerability management, which would you pick as the number one out of those two?
+[19:16 - 19:18] Probably vulnerability management.
+[19:19 - 19:19] Okay.
+[19:21 - 19:23] I'm just kind of scanning the list.
+[19:24 - 19:30] I would probably say like Kubernetes agent is something that we've made a lot of investment in.
+[19:30 - 19:50] I think the Kubernetes agent and from an integration point of view, perhaps the Terraform integration, I think we have a lot of customers actually using that already.
+[19:50 - 20:06] I'm just going to call this GitOps and I'm going to put like KS agent plus HashiCorp integrations.
+[20:06 - 20:10] It's like a bucket of capabilities that is probably worth talking about.
+[20:10 - 20:21] Cool.
+[20:21 - 20:27] Well, let's try to, this is due Tuesday, I think.
+[20:27 - 20:31] We want to try to get this done.
+[20:31 - 20:39] So maybe just review this kind of like, let's just kind of pick top five, maybe something from plan and something from CI/CD.
+[20:40 - 20:43] That plan editor is definitely an option for CI/CD.
+[20:45 - 20:46] Yeah, there might be a
+[20:48 - 20:51] sorry, no, sorry, there might be a value stream analytics story in there too.
+[20:53 - 20:57] If we aggregate it all, it's a bummer that customizable value stream analytics is 12.9.
+[20:59 - 21:00] But
+[21:01 - 21:02] Yeah, that might be.
+[21:06 - 21:06] Cool.
+[21:06 - 21:11] Now I'm just going to ping you on this, Cormac, to add a top five plan.
+[21:17 - 21:18] Cool.
+[21:19 - 21:20] I think.
+[21:22 - 21:24] That's a pretty heavy list.
+[21:25 - 21:26] Just looking at it, you know, it's pretty cool.
+[21:27 - 21:28] Yeah, that's great.
+[21:28 - 21:39] Yeah, and this is something we don't do, which I agree. We don't often stop as a company and just kind of look at our wins.
+[21:40 - 21:40] Nope.
+[21:42 - 21:49] I was really, did anybody miss, what do we call it? Assembly? The Assembly?
+[21:49 - 22:03] If you missed it, I recommend it. I laugh because like what assembly reminds me of is like when I was in like a young child in grade school, they'd have this big stack of like carpet.
+[22:03 - 22:13] They're like squares of carpet. And you go like you go into the gym and you pull off a square of carpet and all the children would sit on a square of carpet.
+[22:13 - 22:14] And that was like you'd have an assembly.
+[22:14 - 22:44] I remember that too Put everyone in the gym or like convert the half cafeteria gym take away the big barrier between it so that we can have more room and then take those carpets that have never been cleaned and just sit on them and it be great Aside from the goofy name I thought that and of course we can talk about any of it on YouTube but man that was like a really awesome look back at like here some wins and here some exciting things that we done
+[22:45 - 22:48] And so I think we just need to get better at this as a company.
+[22:48 - 22:53] I think this exercise is an opportunity that I think we do a little bit of that, but this is doing it more.
+[22:53 - 23:00] So, Samia, you have some questions here for Alita?
+[23:00 - 23:00] Yes.
+[23:00 - 23:14] So in the competitive sheet, I was, I mean, I've already identified the features for CD, Configure, as well as Monitor, getting it reviewed from PM.
+[23:15 - 23:25] My guess was, or my understanding was that we wouldn't have the same set of competitors that we're going to compare to, but the right competitors for that particular stage.
+[23:25 - 23:50] So for example, for monitor, we may not have like a GitHub or something like that. We would have monitor-based competitors. Was that the understanding? Because we identified that entire list of competitors and partners for every single stage. I thought we were going to be using those competitors to compare against.
+[23:50 - 23:59] So I just wanted your input on what, because I saw some of you have compared with the five competitors already listed over there.
+[24:01 - 24:06] They may not be relevant. For example, CloudBees may not be relevant for monitor stage at all.
+[24:06 - 24:08] So that's what I wanted to check with you.
+[24:09 - 24:11] Yeah, that's the case. I need to go back and look at the spreadsheet.
+[24:12 - 24:17] I mean, if the competitor does not apply to that particular stage, they shouldn't be on that tab in the spreadsheet.
+[24:17 - 24:24] So are you saying that you see competitors on that tab for a stage where they don't apply?
+[24:24 - 24:26] Yeah, I think it was copy pasted.
+[24:27 - 24:28] Each of them has the same.
+[24:28 - 24:35] So each sheet has ADO, Atlassian, GitHub, Jenkins, JFrog and CloudBees, right?
+[24:35 - 24:38] So that may not be relevant for monitor.
+[24:38 - 24:45] For configure, it would be a different set of competitors that we need to include, which I think we already identified a while back.
+[24:45 - 24:49] I think we identified top three competitors for every stage.
+[24:50 - 24:51] Yeah, we tiered them.
+[24:51 - 24:52] That's when we tiered them, right?
+[24:52 - 24:53] Tier one, tier two, tier three.
+[24:53 - 24:57] So this this where we are right now is we're looking at just tier one competitors.
+[24:57 - 25:10] That probably why I cut and paste them because those are all tier ones So we just focusing on tier one right now So if they don apply to that stage don worry about it Make sense So just pick the ones out of that list that apply to our stage
+[25:10 - 25:11] Right.
+[25:12 - 25:20] We just use the tier one competitors and if they're not, if they don't, are not applicable, then we don't have to fill out anything for that.
+[25:21 - 25:23] Yeah, for now, but then we'll move to tier two and tier three.
+[25:24 - 25:25] Then we'll look at those.
+[25:25 - 25:32] Do we need to add a line item for GitLab as well? Because I think that's missing over here.
+[25:32 - 25:39] Yeah, we should add a, I think you asked me that before, right? Or someone asked me.
+[25:39 - 25:41] I'm just looking at it.
+[25:41 - 25:41] Brian asked.
+[25:41 - 25:43] Yeah, we did.
+[25:43 - 25:50] Because the way without it, you're basically putting all the things that we're better at.
+[25:50 - 25:53] Yeah, for sure. For sure. Yeah.
+[25:53 - 26:04] Right. So ideally when we pick like the 10 to 15 features, some of those were like GitLab only, some of those were like GitLab didn't have.
+[26:05 - 26:10] Well, I thought it was supposed to be, none of them should be GitLab only, right? It should be all through the lens of.
+[26:10 - 26:11] Yeah. Yeah.
+[26:11 - 26:18] Exactly. Yeah. It should be like market lens. So in an ideal world, most of them are like, this is what I'm shopping for, this solution.
+[26:18 - 26:31] Some of them might be GitLab only, some of them might be like competitor only, so that somebody would look at it and be like, this looks honest and trustworthy and like an accurate assessment of the market.
+[26:31 - 26:32] Yeah, it's fair.
+[26:33 - 26:41] And then, yeah, I think, Samia, for this, just to kind of reiterate for this one, we're only doing these five competitors, so we'll do the other ones in a later stage.
+[26:41 - 26:53] And then if the vendor bills themselves as a platform, then we should specifically call out that they have zero.
+[26:53 - 26:56] So GitHub bills itself as a platform.
+[26:56 - 26:58] It sells itself that way.
+[26:59 - 27:00] Same with Azure DevOps.
+[27:01 - 27:02] Same with JFrog.
+[27:02 - 27:06] Well, they all do for tier one except Jenkins and CloudBees.
+[27:06 - 27:08] Yeah, Jenkins CloudBees does not.
+[27:08 - 27:09] But what is it?
+[27:09 - 27:10] Azure DevOps.
+[27:11 - 27:19] GitHub, Atlassian and although Atlassians, we still need to figure something out there.
+[27:19 - 27:24] As a matter of fact, did I go back and add Atlassian because based on conversation, I think we have to do it.
+[27:24 - 27:25] I don't think we can leave them off.
+[27:25 - 27:28] I have to look at this spreadsheet.
+[27:28 - 27:41] Atlassian is on that sheet Okay yeah I went back and added them because based on discussion like my I wanted to take them off completely and just leave them as a partner but we can do that
+[27:41 - 27:49] So yeah, so for those platform, you know, we should call out the fact that they don't have any monitoring.
+[27:49 - 27:57] If they have like zero out of 15, we should call that out. Same with configure stuff for this, you know, any those kind of capabilities.
+[28:00 - 28:13] I think if we took that a step further, it'd be good to even describe it in a way that doesn't just say our product stage and use like a value-based description of what monitor and configure mean, because otherwise we're just, no, that's not going to do any good for us.
+[28:14 - 28:18] Have you guys seen the new infographic that the design team has come up with?
+[28:18 - 28:18] Not yet.
+[28:19 - 28:20] Oh, you haven't?
+[28:20 - 28:21] No.
+[28:22 - 28:25] Do we have a link to that quickly, William? I don't know.
+[28:25 - 28:29] Or you can throw it in the notes if you find it.
+[28:30 - 28:33] All right, let's see who can find it faster.
+[28:34 - 28:36] I can guarantee you not with the amount of tabs I have open.
+[28:37 - 28:39] Oh my God, that's what I'm like.
+[28:39 - 28:40] It probably won't be me.
+[28:41 - 28:47] So this is why I send everything to Google Gmail
+[28:47 - 28:50] because the search is so fast.
+[28:50 - 28:54] So I literally have a folder where all of my GitLab pipelines go
+[28:54 - 28:57] and I can just search for infographic.
+[28:57 - 28:58] Oh, I found it.
+[28:58 - 28:59] I found it.
+[28:59 - 28:59] I found it.
+[29:00 - 29:21] Who could lick it first? I found it. I found it. So this is the one, so there's two. This is the one for the single tool comparison, but then for the, but it's going to look the same, but then here's the one for, I just put it in chat for you guys. And here's the one for the platform players.
+[29:21 - 29:47] So we made a couple decisions along the way. So one of the decisions was to just go with stages. It would have been like a whole nother layer of, okay, if we don't go with just the GitLab stages, the 10 stages, what do we use? That has to be determined, reconciled, all this kind of stuff.
+[29:47 - 29:54] I don't know how long it's been since we updated.
+[29:54 - 30:01] Those pages have not been updated, but we are just trying to move towards some progress.
+[30:01 - 30:04] So I concur that maybe...
+[30:04 - 30:12] Configure and monitor is not as descriptive as it could be, but the place where it will... So actually, I'll share one thing.
+[30:12 - 30:15] It just seems like the right time to do this, right?
+[30:15 - 30:18] Manage is even less descriptive than that.
+[30:18 - 30:33] So the way this is getting built is off of a data model. So in theory, these could change or be updated where the underlying data remains the same, right?
+[30:33 - 30:48] We're separating presentation layer from data layer. It's not going to be as hard to update in the future as it currently is, where it's a mess of spaghetti code and it's really, really difficult to update.
+[30:48 - 31:01] And then the other component is then, not in this iteration, we need to get something live, but in the next iteration, you'll click on verify and it'll go down to the list of the 15 features.
+[31:01 - 31:06] And that's where you can describe what the heck a verify is or what the heck a manage is.
+[31:06 - 31:18] Okay. So we will have an opportunity to do that because I was about to say, you're going to hate me for this, but we're being cyclical about the same problem we had, which being the audience coming in and not knowing anything about these specific stages.
+[31:18 - 31:18] Yeah.
+[31:19 - 31:26] That was one of the big things. It's like, okay, 15 features, what? What are they? Why do I care?
+[31:26 - 31:27] Are they playing better?
+[31:27 - 31:31] Yeah, to say that means nothing to me looking at this page.
+[31:32 - 31:33] But quick question.
+[31:33 - 31:34] I'm not going to be a Debbie Downer. That's it.
+[31:35 - 31:36] No, we're on top of it.
+[31:36 - 31:38] Actually, if you read the thread, I brought that up,
+[31:38 - 31:41] but she said we can't do it right now, which I understand.
+[31:42 - 31:43] But small thing, what do you guys think about the colors?
+[31:45 - 31:46] I don't know.
+[31:47 - 31:49] I usually let the designers handle that stuff.
+[31:49 - 31:55] I like the fact that...
+[31:55 - 31:59] that there's no red on there.
+[31:59 - 32:01] Oh, you like that? That's what I was going for.
+[32:01 - 32:02] You like that? Okay.
+[32:02 - 32:05] It's not obviously negative.
+[32:05 - 32:07] So we're saying, because it really does lend itself
+[32:07 - 32:10] to being a comparison more than a competitive piece
+[32:10 - 32:12] because of that, because there's no, you know,
+[32:12 - 32:15] these folks at 37% are in the red and they're terrible.
+[32:15 - 32:18] They just have less green or we would have less green.
+[32:18 - 32:22] So it's not being worse, it's being less good.
+[32:22 - 32:49] And I think that lends itself to working with all the coopetition situations we were talking about Yeah that the goal We want to generate a helpful asset for the industry This is not just like marketing shill This should be like a helpful page So yeah the goal is to have a comparison comparing DevOps tools not a you know this is all of our competitors and why we better
+[32:49 - 33:08] I think from a competitive mindset and for me, I'm like, let's go hard. Let's put some red on there and call them. That's just the way I think. But I brought it up and for now we're going to stick with the green. They recommend we stick with the green and see how it goes. But I don't know. I was feeling the red and yellow too.
+[33:09 - 33:13] It is easy on the eyes. There's something to be said for that.
+[33:13 - 33:26] Cool. Well, we're almost up on time, but I did want to share one thing that kind of came in like basically Friday. It was like late Thursday for me.
+[33:27 - 33:38] So this is another thing. A lot of these things I don't have like a ton of context on. I just know like we're just trying to up our game. So like, hey, let's move fast and do the best we can do.
+[33:38 - 33:48] So this is a little bit of a messaging framework. And then the assignment that was given to me was to fill in these boxes here.
+[33:50 - 34:04] And then this was the fodder that I got. So there was these ones that said, like, from roadmap to company vision, we are transparent. And a single source of truth, countless possibilities.
+[34:04 - 34:12] Honestly, I think this one's really pithy and catchy. I really like it. I really liked...
+[34:12 - 34:18] What's the other one that I like that not everyone does? All in one for everyone. So
+[34:18 - 34:19] I just...
+[34:19 - 34:25] I don't know. I just think there's something catchy about that. But I know that kind of
+[34:25 - 34:32] catchy is not everyone's cup of tea. All that's to say is the assignment here that I took
+[34:32 - 34:40] I think the reason I took it was to write a pithy, few words, punchy statement for each of these three things.
+[34:40 - 34:46] So I ended up with a single source of truth, countless possibilities. I like that a lot.
+[34:46 - 34:56] This one I went with end-to-end control over your software factory. Not as pithy, or not as catchy, but...
+[34:56 - 34:57] I like it.
+[34:57 - 35:14] So what the difference between that slide and the next one that doesn have anything under security This was the Honestly so when I first got this it didn have this and it didn have anything under security
+[35:14 - 35:15] So this was like...
+[35:15 - 35:18] So what you do is just your iteration of it?
+[35:18 - 35:23] Yeah, this is mine. This is I just put here so that I would have like the original statements.
+[35:23 - 35:24] Oh, got it.
+[35:24 - 35:42] Automate nearly anything, collaborate on everything. I kind of like that, but I... This one I hate. Scale up, speed up, test up. I don't think anybody tests up. I think that's really goofy. So I hate it. This one I love. For me, it's I love it or I hate it.
+[35:42 - 35:45] I love how you're just like, bam.
+[35:45 - 35:59] So anyway, what I'd love in just in five minutes now, and then we can just kind of end the call, is kind of like anything that you would change this out for, anything that you would change this out for.
+[35:59 - 36:02] And then actually, let's start here.
+[36:02 - 36:05] This one I couldn't pick.
+[36:06 - 36:07] And I'll tell you why.
+[36:07 - 36:12] It's because I like things to have parity in their tone.
+[36:12 - 36:12] Right.
+[36:12 - 36:25] So this is maybe like super nuanced elements of messaging, but I hate it if it's like a single source of truth that's like a noun phrase and the end control that's like a noun item.
+[36:26 - 36:29] So you could say with GitLab, you get a single source of truth.
+[36:29 - 36:32] With GitLab, you get end to end control.
+[36:32 - 36:36] And you can't say with GitLab, you get move fast with confidence.
+[36:37 - 36:39] No, but you can say more speed, less risk.
+[36:39 - 36:40] I like that one the best.
+[36:40 - 36:41] I don't like the last one.
+[36:41 - 36:43] I agree.
+[36:43 - 36:46] That's why I put this one at top, was for that parity.
+[36:47 - 36:52] And then so it sounds like kind of y'all's thoughts are that's good as well.
+[36:53 - 36:59] Yeah, the only thing it might be missing, but I don't know how we do it without overcomplicating it, is...
+[36:59 - 37:02] Well, I guess less risk also implies higher quality.
+[37:03 - 37:06] I guess that kind of bundles the quality and the security together.
+[37:07 - 37:10] So I've talked myself out of not liking that.
+[37:10 - 37:10] So yeah, good.
+[37:11 - 37:18] Cindy's last blog post had a really good turn of phrase that I stole for GiveApp14 when she was out.
+[37:18 - 37:22] It was like, secure the software factory and all the stuff that you're making it.
+[37:22 - 37:25] She said it really elegantly, so I just copied it.
+[37:25 - 37:42] And its deliverables Secure the software factory and its deliverables Yeah I thought it was good to emphasize both because they mean different things Yeah Yeah so you could say secure and control your software factory and its deliverables
+[37:42 - 37:51] Maybe that would encompass both thoughts.
+[37:51 - 37:54] I'm not a big fan of the it's deliverables.
+[37:54 - 37:55] Is there a...
+[37:55 - 37:56] Can we say like...
+[37:56 - 38:02] Your software factory and your software? Or your software and your product?
+[38:02 - 38:07] Product sounds like car manufacturer.
+[38:07 - 38:11] You could say IP here, but it just doesn't sound right. And that's always shorthand.
+[38:11 - 38:15] Yeah. I like this one better.
+[38:17 - 38:23] Yeah, I think I do too. But I appreciate the thought, Brian.
+[38:23 - 38:32] And then the last thing I'll say is, so this was my attempt to channel my inner Ash Withers.
+[38:34 - 38:41] I think Ash is super good at just, again, just the catchier, the turn of phrase element to it.
+[38:43 - 38:49] And so this kind of idea, single source of truth, countless possibilities, or all in one for
+[38:49 - 39:00] I'm sorry, everyone. There's something catchy about this. So here I was trying to envision, what is it that we actually give you with this velocity? It's velocity with confidence is what you get.
+[39:02 - 39:06] I like your move fast with confidence better than increase speed and stay on track.
+[39:06 - 39:17] Yeah, so I was thinking of like, you know, if you're in a race car and you go super, super fast, let's say you're in the bike race, right?
+[39:18 - 39:23] And you're going so fast and somebody holds out the sign and then half of the bike race collapses.
+[39:23 - 39:24] Right.
+[39:26 - 39:30] So it's almost kind of like you can keep going faster and faster and faster.
+[39:31 - 39:36] And if somebody jumps out with a sign in the middle of the racetrack, you're not going to get tripped up by it.
+[39:36 - 39:41] Because GitLab's testing is going to catch that, its security is going to catch that.
+[39:41 - 39:46] All of those elements that allow you to move faster, but to do so with confidence.
+[39:46 - 39:49] Because otherwise, the faster you go, then it gets more dangerous.
+[39:49 - 39:55] So trying to encapsulate that in this, that was kind of where I was like, stay on track, but I didn't like it either.
+[39:55 - 39:58] Did you just open the door for a NASCAR partnership?
+[39:58 - 40:03] Hey, NASCAR goes fast and turns left because of GitLab.
+[40:03 - 40:14] So I don't think I like that one. And then I think between these two, I like move fast with
+[40:14 - 40:20] confidence, but I don't like the verbiage of it because it doesn't have parity. So that's where I
+[40:20 - 40:26] think more speed. Do you want to add, maybe we can add high confidence or more confidence at the end
+[40:26 - 40:33] of your first statement. So it kind of combines all of it. So more speed, less risk, high confidence.
+[40:33 - 40:36] I was going to say, confidence is kind of overused anyway.
+[40:36 - 40:38] Like I'd see a lot of competitors and vendors using it.
+[40:38 - 40:42] I really liked the first one, just more speed, less risk, bam, no trade-offs.
+[40:42 - 40:44] You know, just, that's how it is.
+[40:45 - 40:47] Ooh, no trade-offs.
+[40:48 - 40:50] That's one of my go-tos. I love that one.
+[40:52 - 40:55] This gets into the no trade-offs.
+[40:56 - 41:00] The engineer in me says, there's never no trade-offs.
+[41:00 - 41:06] That's like saying like 100% secure, complete. This is why we always say mitigate, right?
+[41:06 - 41:10] We always say risk or less risk. You never say no.
+[41:10 - 41:13] We have some leeway with messaging, right? I mean, not everything, you know.
+[41:13 - 41:25] How about just more speed less risk with confidence Yeah More speed
+[41:28 - 41:31] The Ricky Bobby in me really did like the no trade-offs there, Parker.
+[41:31 - 41:34] Yeah. Oh, is that, was that from?
+[41:34 - 41:37] No, but it could have been. It's something Ricky Bobby would have said.
+[41:37 - 41:39] If anyone hasn't seen Talladega Nights, they should.
+[41:40 - 41:41] That's the homework for this weekend.
+[41:42 - 41:46] We talk about it on Monday in our little social report.
+[41:46 - 41:52] I often say, thank you, little eight pound, five ounce baby Jesus with the golden diapers.
+[41:53 - 41:57] I say that so often that I just think everybody has seen Talladega Nights, but then I realized
+[41:57 - 41:59] that people that haven't are like, William's really weird.
+[42:00 - 42:03] And then next week we'll watch Step Brothers.
+[42:03 - 42:05] That's another great one.
+[42:05 - 42:06] So much room for activities.
+[42:08 - 42:08] Okay.
+[42:09 - 42:12] I'm going to go with more speed, less risk.
+[42:12 - 42:17] And I think this is due at the end of the day.
+[42:17 - 42:21] So any additional thoughts I'm actually going to untag.
+[42:22 - 42:26] I mean, it's strong. All those are, you know, those are good.
+[42:27 - 42:27] Awesome. Well,
+[42:28 - 42:32] this was kind of fun to do a little bit of like working together session and
+[42:32 - 42:35] keep it rocking.
+[42:38 - 42:40] Good to see everybody. See you soon.

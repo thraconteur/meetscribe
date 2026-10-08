@@ -1,0 +1,9 @@
+﻿id,task,owner,owner_stated,deadline,deadline_stated,timestamp,evidence
+T1,Add VS Code to the feature list,Unspecified,False,Unspecified,False,10:23,"I didn't add it, but I can add that in. I've got good notes on that."
+T2,Aggregate shipped items from the last 12 months and re‑bucket them,Unspecified,False,Unspecified,False,15:50,I'm going to have to go through and do some aggregating after this.
+T3,Finalize top five overall features and review them by Tuesday,Unspecified,False,Tuesday,True,20:21,"Well, let's try to, this is due Tuesday, I think."
+T4,Add a top‑five plan entry,Cormac,True,Unspecified,False,21:06,"Now I'm just going to ping you on this, Cormac, to add a top five plan."
+T5,Add a GitLab line item to the competitive analysis spreadsheet.,Unspecified,False,Unspecified,False,25:25,Do we need to add a line item for GitLab as well? Because I think that's missing over here.
+T6,Re‑add Atlassian to the competitive spreadsheet as a competitor.,Unspecified,False,Unspecified,False,27:28,I went back and added them because based on discussion like my I wanted to take them off completely and just leave them as a partner but we can do that
+T7,Mark zero monitoring and configure capabilities for platform vendors in the spreadsheet.,Unspecified,False,Unspecified,False,27:41,"So for those platform, you know, we should call out the fact that they don't have any monitoring. If they have like zero out of 15, we should call that out."
+T8,Find and share the new design‑team infographic link with the group.,William,True,Unspecified,False,28:22,"Do we have a link to that quickly, William? I don't know."
