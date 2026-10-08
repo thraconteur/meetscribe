@@ -1,0 +1,18 @@
+{
+  "_comment": "Hand-written answer key for samples/demo_meeting_script.txt, used by scripts/evaluate.py",
+  "domain_terms": ["Kafka", "Postgres", "Redis", "p99", "webhook", "kubectl", "Grafana", "PgBouncer", "SOC 2",
+                   "idempotency", "Razorpay", "LoRA", "Llama", "vLLM", "GPU"],
+  "decisions": [
+    "Roll out PgBouncer to production in the next sprint"
+  ],
+  "not_decisions": [
+    "Serve the support bot with vLLM",
+    "Put the fine-tuned model into production"
+  ],
+  "action_items": [
+    {"task": "Add a Grafana alert for Kafka consumer lag", "owner": "Rohan", "deadline": "by Thursday"},
+    {"task": "Write the PgBouncer rollout runbook", "owner": "Meera", "deadline": null},
+    {"task": "Fix idempotency key handling in the Razorpay webhook handler", "owner": null, "deadline": null},
+    {"task": "Collect GPU cost numbers for both serving options", "owner": "Kabir", "deadline": "before the next sync"}
+  ]
+}

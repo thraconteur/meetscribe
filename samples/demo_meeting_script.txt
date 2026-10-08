@@ -1,0 +1,23 @@
+# Demo meeting script — "Payments platform weekly sync"
+# Format:  SPEAKER | text      (voices are assigned in scripts/make_sample_meeting.py)
+# This is the ground truth used by scripts/evaluate.py.
+Ananya | Okay, let's get started. This is the weekly sync for the payments platform. We have three things today: the Kafka consumer lag incident, the Postgres migration, and the fine-tuning experiment for the support bot.
+Ananya | Rohan, can you start with the incident?
+Rohan | Sure. On Tuesday the Kafka consumer lag on the settlements topic went above forty thousand messages. The root cause was a bad Redis connection pool setting after the deploy. p99 latency on the webhook endpoint went up to twelve hundred milliseconds.
+Rohan | I've already rolled back the config with kubectl, and the lag is back to normal. But we still don't have an alert for consumer lag in Grafana.
+Ananya | Okay. Rohan, please add a Grafana alert for consumer lag by Thursday.
+Rohan | Yes, I'll set up the Grafana alert by Thursday.
+Ananya | Good. Second item, the Postgres migration. Meera, where are we?
+Meera | We tested PgBouncer in transaction pooling mode on staging and the connection count dropped by sixty percent. I think we should move production to PgBouncer.
+Kabir | Before we do that, do we need to check the SOC 2 audit requirements? I'm not sure it affects anything, but the auditors asked about database access logs.
+Ananya | Let's not block on that. We agreed last week that the audit only covers the read replicas. So the decision is: we roll out PgBouncer to production in the next sprint.
+Meera | Great. I'll write the rollout runbook.
+Ananya | Thanks Meera. Someone also needs to update the idempotency key handling in the Razorpay webhook handler, because retries are creating duplicate refunds.
+Rohan | That needs to be fixed, but I can't take it this week.
+Ananya | Okay, we'll leave the owner open for now and pick it up in planning.
+Ananya | Last item, the support bot. Meera, the LoRA fine-tuning results?
+Meera | We fine-tuned a Llama model with LoRA on eight thousand support tickets. It answers refund questions better, but it is not ready for production. Accuracy went from seventy one percent to seventy eight percent on our eval set.
+Kabir | Could we serve it with vLLM instead of our current setup? It might cut the GPU cost.
+Ananya | Maybe. Let's not decide that today. Kabir, could you collect the GPU cost numbers for both options before the next sync?
+Kabir | Sure, I'll get the numbers before next week's sync.
+Ananya | Perfect. To recap: PgBouncer goes to production next sprint, Rohan adds the Grafana alert by Thursday, Meera writes the runbook, and Kabir compares the serving costs. Thanks everyone.
